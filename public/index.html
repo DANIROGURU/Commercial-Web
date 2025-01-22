@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOTUCOM - Computer Sales</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #banner {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #banner h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        #banner p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        #offer {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: yellow;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">AOTUCOM</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="banner">
+        <h1>Big Sale!</h1>
+        <p>Get all products at a massive <span id="offer">50% OFF!</span></p>
+    </div>
+
+    <main>
+        <section id="product-catalog">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="images/laptop1.jpg" alt="Gaming Laptop">
+                    <h3>Gaming Laptop</h3>
+                    <p>Price: KSh 50,000.00</p>
+                    <button onclick="addToCart('Gaming Laptop', 50000.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/mouse.jpg" alt="Wireless Mouse">
+                    <h3>Wireless Mouse</h3>
+                    <p>Price: KSh 1,500.00</p>
+                    <button onclick="addToCart('Wireless Mouse', 1500.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/keyboard.jpg" alt="Mechanical Keyboard">
+                    <h3>Mechanical Keyboard</h3>
+                    <p>Price: KSh 3,000.00</p>
+                    <button onclick="addToCart('Mechanical Keyboard', 3000.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/monitor.jpg" alt="4K Monitor">
+                    <h3>4K Monitor</h3>
+                    <p>Price: KSh 6,000.00</p>
+                    <button onclick="addToCart('4K Monitor', 6000.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/usb_hub.jpg" alt="USB-C Hub">
+                    <h3>USB-C Hub</h3>
+                    <p>Price: KSh 8,000.00</p>
+                    <button onclick="addToCart('USB-C Hub', 8000.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/headset.jpg" alt="Gaming Headset">
+                    <h3>Gaming Headset</h3>
+                    <p>Price: KSh 18,000.00</p>
+                    <button onclick="addToCart('Gaming Headset', 18000.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/ssd.jpg" alt="External SSD">
+                    <h3>External SSD</h3>
+                    <p>Price: KSh 10,000.00</p>
+                    <button onclick="addToCart('External SSD', 10000.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/webcam.jpg" alt="Webcam">
+                    <h3>Webcam</h3>
+                    <p>Price: KSh 2,500.00</p>
+                    <button onclick="addToCart('Webcam', 2500.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/laptop_stand.jpg" alt="Laptop Stand">
+                    <h3>Laptop Stand</h3>
+                    <p>Price: KSh 2,500.00</p>
+                    <button onclick="addToCart('Laptop Stand', 2500.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/wireless_charger.jpg" alt="Wireless Charger">
+                    <h3>Wireless Charger</h3>
+                    <p>Price: KSh 3,500.00</p>
+                    <button onclick="addToCart('Wireless Charger', 3500.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/bluetooth_speaker.jpg" alt="Portable Bluetooth Speaker">
+                    <h3>Portable Bluetooth Speaker</h3>
+                    <p>Price: KSh 7,000.00</p>
+                    <button onclick="addToCart('Portable Bluetooth Speaker', 7000.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/mouse_pad.jpg" alt="RGB Gaming Mouse Pad">
+                    <h3>RGB Gaming Mouse Pad</h3>
+                    <p>Price: KSh 15,000.00</p>
+                    <button onclick="addToCart('RGB Gaming Mouse Pad', 15000.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/hdmi_cable.jpg" alt="HDMI Cable">
+                    <h3>HDMI Cable</h3>
+                    <p>Price: KSh 1,000.00</p>
+                    <button onclick="addToCart('HDMI Cable', 1000.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/surge_protector.jpg" alt="Surge Protector">
+                    <h3>Surge Protector</h3>
+                    <p>Price: KSh 2,000.00</p>
+                    <button onclick="addToCart('Surge Protector', 2000.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="images/fitness_tracker.jpg" alt="Fitness Tracker">
+                    <h3>Fitness Tracker</h3>
+                    <p>Price: KSh 3,000.00</p>
+                    <button onclick="addToCart('Fitness Tracker', 3000.00)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="location">
+            <p>Located at: Nakuru Town, Highway Towers, Room 101 & Room 102</p>
+        </div>
+        <div class="social-media">
+            <p>Follow us on:</p>
+            <ul>
+                <li><a href="https://twitter.com/AutocomSystems" target="_blank">Twitter</a></li>
+                <li><a href="https://facebook.com/AutocomSystems" target="_blank">Facebook</a></li>
+                <li><a href="https://instagram.com/AutocomSystems" target="_blank">Instagram</a></li>
+                <li><a href="https://tiktok.com/@AutocomSystems" target="_blank">TikTok</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 AOTUCOM. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function addToCart(productName, price) {
+            alert(productName + " added to cart at KSh " + price);
+        }
+    </script>
+</body>
+</html>
